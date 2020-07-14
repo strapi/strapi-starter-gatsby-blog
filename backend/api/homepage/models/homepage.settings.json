@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "Homepage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "Nav": {
+      "type": "component",
+      "repeatable": false,
+      "component": "decoration.navbar"
+    },
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "decoration.hero"
+    },
+    "Footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "decoration.footer"
+    }
+  }
+}
