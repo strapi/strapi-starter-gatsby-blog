@@ -3,16 +3,13 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const Card = ({ article }) => {
+  console.log(article);
   return (
     <Link to={`/article/${article.node.slug}`} className="uk-link-reset">
       <div className="uk-card uk-card-muted">
         <div className="uk-card-media-top">
-          {/* <img
-            src={article.node.image.publicURL}
-            alt={article.node.image.publicURL}
-            height="100"
-          /> */}
-          <Img fixed={article.node.Image.media.formats.thumbnail.url} />
+
+          <Img fixed={article.node.image.childImageSharp.fixed} imgStyle={{ position: 'static' }} />
         </div>
         <div className="uk-card-body">
           <p id="category" className="uk-text-uppercase">

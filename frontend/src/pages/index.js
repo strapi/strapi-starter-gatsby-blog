@@ -25,13 +25,12 @@ const IndexPage = () => (
                 category {
                   name
                 }
-                Image {
-                  media {
-                    formats {
-                      thumbnail {
-                        url
+                image {
+                  publicURL
+                  childImageSharp {
+                      fixed(width: 660) {
+                      	src
                       }
-                    }
                   }
                 }
               }

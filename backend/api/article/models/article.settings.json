@@ -35,14 +35,20 @@
       "type": "uid",
       "targetField": "title"
     },
-    "Image": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blog.image"
-    },
     "category": {
       "model": "category",
       "via": "articles"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

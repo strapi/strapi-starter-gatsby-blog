@@ -15,13 +15,11 @@ export const query = graphql`
           category {
             name
           }
-          Image {
-            media {
-              formats {
-                thumbnail {
-                  url
+          image {
+            childImageSharp {
+                fixed(width: 660) {
+                  src
                 }
-              }
             }
           }
         }

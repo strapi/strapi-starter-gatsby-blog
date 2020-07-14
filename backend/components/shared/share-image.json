@@ -9,7 +9,7 @@
     "alt": {
       "type": "string"
     },
-    "media": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

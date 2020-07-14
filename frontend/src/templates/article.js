@@ -19,19 +19,13 @@ export const query = graphql`
         metaDescription
         metaTitle
         shareImage {
-          media {
-            formats {
-              medium {
-                url
-              }
-            }
+          image {
+            publicURL
           }
         }
       }
-      Image {
-        media {
-          url
-        }
+      image {
+        publicURL
       }
       childStrapiArticleContent {
         childMdx {
@@ -49,14 +43,14 @@ const Article = ({ data }) => {
     <Seo
           title={article.Seo.metaTitle}
           description={article.Seo.metaDescription}
-          image={article.Seo.shareImage.media.formats.medium.url}
+          image={article.Seo.shareImage.image.publicURL}
         />
       <div>
         <div
           id="banner"
           className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-          data-src={article.Image.media.url}
-          data-srcset={article.Image.media.url}
+          data-src={article.image.publicURL}
+          data-srcset={article.image.publicURL}
           data-uk-img
         >
           <h1>{article.title}</h1>
