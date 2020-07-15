@@ -16,24 +16,30 @@
       "required": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "publishedAt": {
-      "type": "date"
+      "type": "datetime",
+      "required": true
     },
     "status": {
       "type": "enumeration",
       "enum": [
         "draft",
         "published"
-      ]
+      ],
+      "required": true,
+      "default": "draft"
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "category": {
       "model": "category",
@@ -43,12 +49,12 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": true
     }
   }
 }

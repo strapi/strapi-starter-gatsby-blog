@@ -16,7 +16,7 @@ const IndexPage = () => (
               HeroText
             }
           }
-          allStrapiArticle {
+          allStrapiArticle(filter: {status: {eq: "published"}}) {
             edges {
               node {
                 strapiId

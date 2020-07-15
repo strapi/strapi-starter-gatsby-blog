@@ -10,7 +10,7 @@ import Seo from "../components/seo"
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
-    strapiArticle(slug: { eq: $slug }) {
+    strapiArticle(slug: { eq: $slug }, status: {eq: "published"}) {
       strapiId
       title
       content

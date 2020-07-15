@@ -23,11 +23,6 @@
       "type": "component",
       "repeatable": false,
       "component": "decoration.hero"
-    },
-    "Footer": {
-      "type": "component",
-      "repeatable": false,
-      "component": "decoration.footer"
     }
   }
 }

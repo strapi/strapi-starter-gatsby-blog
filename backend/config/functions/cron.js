@@ -11,11 +11,17 @@
  */
 
 module.exports = {
-  /**
-   * Simple example.
-   * Every monday at 1am.
-   */
-  // '0 1 * * 1': () => {
-  //
-  // }
+  '*/1 * * * *': async () => {
+
+    // Fetch articles to publish
+    const draftArticlesToPublish = await strapi.api.article.services.article.find({
+      status: 'draft',
+      publishedAt_lt: new Date(),
+    });
+
+    // Update status of articles
+    draftArticlesToPublish.forEach(async article => {
+      await strapi.api.article.services.article.update({ id: article.id }, { status: 'published' });
+    })
+  }
 };

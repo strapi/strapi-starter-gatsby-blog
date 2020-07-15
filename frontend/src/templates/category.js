@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 
 export const query = graphql`
   query Category($slug: String!) {
-    articles: allStrapiArticle(filter: { category: { slug: { eq: $slug } } }) {
+    articles: allStrapiArticle(filter: { status: {eq: "published"}, category: { slug: { eq: $slug } } }) {
       edges {
         node {
           slug

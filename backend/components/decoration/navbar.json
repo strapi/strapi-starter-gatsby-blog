@@ -6,9 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "dark": {
-      "type": "boolean"
-    },
     "navText": {
       "type": "string"
     }

@@ -17,7 +17,8 @@
     "shareImage": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.share-image"
+      "component": "shared.share-image",
+      "required": true
     }
   }
 }
