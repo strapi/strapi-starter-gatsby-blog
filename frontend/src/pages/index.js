@@ -28,7 +28,7 @@ const IndexPage = () => (
                 image {
                   publicURL
                   childImageSharp {
-                      fixed(width: 660) {
+                      fixed(width: 800, height: 500) {
                       	src
                       }
                   }

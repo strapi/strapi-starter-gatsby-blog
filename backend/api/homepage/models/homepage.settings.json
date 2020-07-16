@@ -17,12 +17,14 @@
     "Nav": {
       "type": "component",
       "repeatable": false,
-      "component": "decoration.navbar"
+      "component": "decoration.navbar",
+      "required": true
     },
     "Hero": {
       "type": "component",
       "repeatable": false,
-      "component": "decoration.hero"
+      "component": "decoration.hero",
+      "required": true
     }
   }
 }

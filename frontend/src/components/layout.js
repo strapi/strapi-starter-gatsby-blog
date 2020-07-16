@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
             metaDescription
             shareImage {
               image {
-                url
+                publicURL
               }
             }
           }

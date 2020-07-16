@@ -1,12 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import {MDXProvider} from '@mdx-js/react'
+
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -46,6 +48,7 @@ const Article = ({ data }) => {
           image={article.Seo.shareImage.image.publicURL}
         />
       <div>
+
         <div
           id="banner"
           className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
@@ -58,9 +61,11 @@ const Article = ({ data }) => {
 
         <div className="uk-section">
           <div className="uk-container uk-container-small">
-            <ReactMarkdown source={article.content} />
+            <MDXProvider>
+              <MDXRenderer>{article.childStrapiArticleContent.childMdx.body}</MDXRenderer>
+            </MDXProvider>
             <p>
-              <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+              Published <Moment format="MMM Do YYYY">{article.published_at}</Moment>
             </p>
           </div>
         </div>

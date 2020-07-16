@@ -31,8 +31,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const articles = result.data.articles.edges
   const categories = result.data.categories.edges
 
-  console.log(articles);
-
   articles.forEach((article, index) => {
     createPage({
       path: `/article/${article.node.slug}`,
