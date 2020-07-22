@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "heroku-postbuild": "node scripts/seed.js",
+    "heroku-postbuild": "strapi build && node scripts/seed.js",
     "seed": "node scripts/seed.js"
   },
   "devDependencies": {},
