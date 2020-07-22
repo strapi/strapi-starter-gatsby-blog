@@ -117,7 +117,6 @@ build
 
 data/*
 !data.zip
-!data.db
 __MACOSX/*
 
 ############################
