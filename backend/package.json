@@ -8,6 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
+    "heroku-prebuild": "node scripts/postgres-env.js",
     "heroku-postbuild": "strapi build && node scripts/seed.js && node scripts/postinstall.js",
     "seed": "node scripts/seed.js"
   },
