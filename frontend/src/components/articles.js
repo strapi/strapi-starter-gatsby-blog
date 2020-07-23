@@ -8,7 +8,7 @@ const Articles = ({ articles }) => {
 
   return (
     <div>
-      <div className="uk-child-width-1-2" data-uk-grid>
+      <div className="uk-child-width-1-2@s" data-uk-grid>
         <div>
           {leftArticles.map((article, i) => {
             return (

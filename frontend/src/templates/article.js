@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Moment from "react-moment"
 
@@ -34,6 +35,17 @@ export const query = graphql`
           body
         }
       }
+      user {
+        username
+        image {
+          publicURL
+          childImageSharp {
+              fixed(width: 30, height: 30) {
+                src
+              }
+          }
+        }
+      }
     }
   }
 `
@@ -64,9 +76,19 @@ const Article = ({ data }) => {
             <MDXProvider>
               <MDXRenderer>{article.childStrapiArticleContent.childMdx.body}</MDXRenderer>
             </MDXProvider>
-            <p>
-              Published <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-            </p>
+
+            <hr className="uk-divider-small" />
+
+
+            <div class="uk-grid-small uk-flex-left" uk-grid>
+                <div >
+                    <Img fixed={article.user.image.childImageSharp.fixed} imgStyle={{ position: 'static',  borderRadius: '50%' }} />
+                </div>
+                <div class="uk-width-expand">
+                    <p class="uk-margin-remove-bottom">By { article.user.username }</p>
+                    <p class="uk-text-meta uk-margin-remove-top"><Moment format="MMM Do YYYY">{article.published_at}</Moment></p>
+                </div>
+            </div>
           </div>
         </div>
       </div>

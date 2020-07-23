@@ -29,6 +29,7 @@ module.exports = {
         contentTypes: [
           "article",
           "category",
+          "user"
         ],
         singleTypes: [`Homepage`],
         queryLimit: 1000,
