@@ -1,6 +1,6 @@
 # Strapi Starter Gatsby Blog v2
 
-Gatsby starter for creating a blog with Strapi.
+Gatsby starter for creating an great blog with Strapi.
 
 This starter allows you to try Strapi with Gatsby with the example of a simple blog. It is fully customizable and due to the fact that it is open source, fully open to contributions. Do not hesitate to add new features etc ...
 
@@ -64,17 +64,18 @@ That's it! Now Strapi will inform Gatsby Cloud to build your Gatsby project ever
 
 - 1 Single type
 - 4 Components
-- 2 Collection types: Article, Category
+- 3 Collection types: Article, Category, User
 - 6 Created articles
 - 5 Created categories
-- Permissions set to `true` for article and category
+- Permissions set to `true` for article, category and user
 - Responsive design using UIkit
 - Slug system
 - Publication system (draft & published)
+- Role based access control
 
 ### Features in Gatsby
 
-- Use gatsby-image
+- gatsby-image
 - Seo friendly
 
 ### Getting started

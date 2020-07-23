@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 
 async function postinstall() {
   // Path of the package.json file
-  const filePath = `../package.json`;
+  const filePath = `package.json`;
   // Check if the package.json exist
   try {
     if (fs.exists(filePath)) {
