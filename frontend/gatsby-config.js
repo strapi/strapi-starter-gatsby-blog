@@ -9,7 +9,7 @@ module.exports = {
     description:
       "Strapi Gatsby Blog Starter",
     url: process.env.API_URL || "http://localhost:1337", // No trailing slash allowed!
-    image: "/uploads/default_image_90ba12ce65.jpeg", // Path to your image you placed in the 'static' folder
+    image: "/uploads/default-image.jpeg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@you",
   },
   plugins: [
