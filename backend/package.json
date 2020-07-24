@@ -9,7 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "heroku-prebuild": "node scripts/postgres-env.js",
-    "heroku-postbuild": "strapi build && node scripts/postinstall.js"
+    "heroku-postbuild": "strapi build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -26,6 +26,7 @@
     "strapi-plugin-email": "3.1.1",
     "strapi-plugin-upload": "3.1.1",
     "strapi-plugin-users-permissions": "3.1.1",
+    "strapi-provider-upload-cloudinary": "^3.1.1",
     "strapi-utils": "3.1.1",
     "unzip-stream": "^0.3.0"
   },
