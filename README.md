@@ -15,7 +15,7 @@ To deploy the Strapi instance you'll need:
 
 Once you have created these accounts you can deploy your instance by clicking on this button
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mcastres/gatsby-strapi-v2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/strapi/strapi-starter-gatsby-blog-v2)
 
 ### Deploy the frontend
 
@@ -24,8 +24,10 @@ Once you have created these accounts you can deploy your instance by clicking on
 To deploy the Gatsby blog you'll need:
 
   - [A Vercel account](https://vercel.com/dashboard) for free
+  - Wait for your heroku instance to be up and running before deploying your Gatsby Blog
+  
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/strapi/strapi-starter-gatsby-blog-v2)
 
-Once you have created your account, add the url of your Heroku instance (without the trailing slash) as a parameter to the following url.
 
 **On Gatsby Cloud**
 
