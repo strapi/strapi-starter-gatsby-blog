@@ -1,5 +1,5 @@
 {
-  "builds": [{ "src": "./frontend/package.json", "use": "@vercel/next" }],
+  "builds": [{ "src": "./frontend/*", "use": "@vercel/static" }],
   "build": {
     "env": {
       "API_URL": "@api-url"
