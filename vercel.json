@@ -1,13 +1,11 @@
 {
-  "builds": [
-    {
-      "src": "./frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public" 
-      }
-    }
-  ],
+  "type": "static",
+  "alias": "strapi-starter-gatsby-blog",
+  "static": {
+    "public": "frontend/public"
+  },
+  "public": true,
+  "version": 1,
   "build": {
     "env": {
       "API_URL": "@api-url"
