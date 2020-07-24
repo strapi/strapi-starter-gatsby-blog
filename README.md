@@ -89,17 +89,15 @@ cd strapi-starter-gatsby-blog-v2
 
 **Backend**
 
-Install dependencies, insert the data and run your server
+Install dependencies and run your server
 
 ```bash
 # Using yarn
 yarn install
-yarn seed
 yarn develop
 
 # Using npm
 npm install
-npm run seed
 npm run develop
 ```
 

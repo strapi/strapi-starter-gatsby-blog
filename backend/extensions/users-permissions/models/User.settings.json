@@ -65,8 +65,8 @@
       "required": true
     },
     "articles": {
-      "collection": "article",
-      "via": "user"
+      "via": "user",
+      "collection": "article"
     }
   }
 }

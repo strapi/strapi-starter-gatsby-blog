@@ -82,7 +82,7 @@ const Article = ({ data }) => {
 
             <div class="uk-grid-small uk-flex-left" uk-grid>
                 <div >
-                    <Img fixed={article.user.image.childImageSharp.fixed} imgStyle={{ position: 'static',  borderRadius: '50%' }} />
+                  {article.user.image && <Img fixed={article.user.image.childImageSharp.fixed} imgStyle={{ position: 'static',  borderRadius: '50%' }} />}
                 </div>
                 <div class="uk-width-expand">
                     <p class="uk-margin-remove-bottom">By { article.user.username }</p>

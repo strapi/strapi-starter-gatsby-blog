@@ -9,8 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "heroku-prebuild": "node scripts/postgres-env.js",
-    "heroku-postbuild": "strapi build && node scripts/seed.js && node scripts/postinstall.js",
-    "seed": "node scripts/seed.js"
+    "heroku-postbuild": "strapi build && node scripts/postinstall.js"
   },
   "devDependencies": {},
   "dependencies": {
@@ -33,7 +32,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "STRAPI-STARTER-GATSBY-BLOG"
+    "uuid": ""
   },
   "engines": {
     "node": ">=10.0.0",
