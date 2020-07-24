@@ -57,8 +57,7 @@ module.exports = {
         "metaDescription": "Discover my Seo friendly blog built with Strapi and Gatsby. \nThis blog use gatsby image, single type and components and schedule system",
         "shareImage": {
           "alt": "default-image",
-          "image": {
-          }
+          "image": null
         }
       },
       "Nav": {
@@ -88,8 +87,7 @@ module.exports = {
       "updated_by": null,
       "created_at": "2020-07-23T09:03:37.203Z",
       "updated_at": "2020-07-23T09:22:39.309Z",
-      "image": {
-      },
+      "image": null
     },
     {
       "username": "Sarah Baker (Editor)",
@@ -109,8 +107,7 @@ module.exports = {
       "updated_by": null,
       "created_at": "2020-07-23T09:03:55.980Z",
       "updated_at": "2020-07-23T09:22:46.281Z",
-      "image": {
-      },
+      "image": null
     }
   ],
   articles: [
@@ -138,12 +135,10 @@ module.exports = {
         "shareImage": {
           "id": 1,
           "alt": "aaron-swartz",
-          "image": {
-          }
+          "image": null
         }
       },
-      "image": {
-      }
+      "image": null
     },
     {
       "id": 2,
@@ -169,13 +164,10 @@ module.exports = {
         "shareImage": {
           "id": 2,
           "alt": "black-hole",
-          "image": {
-
-          }
+          "image": null
         }
       },
-      "image": {
-      }
+      "image": null
     },
     {
       "id": 3,
@@ -201,13 +193,10 @@ module.exports = {
         "shareImage": {
           "id": 3,
           "alt": "mantis-shrimp",
-          "image": {
-
-          }
+          "image": null
         }
       },
-      "image": {
-      }
+      "image": null
     },
     {
       "id": 4,
@@ -233,13 +222,10 @@ module.exports = {
         "shareImage": {
           "id": 4,
           "alt": "sql",
-          "image": {
-
-          }
+          "image": null
         }
       },
-      "image": {
-      }
+      "image": null
     },
     {
       "id": 5,
@@ -265,13 +251,10 @@ module.exports = {
         "shareImage": {
           "id": 5,
           "alt": "ice",
-          "image": {
-
-          }
+          "image": null
         }
       },
-      "image": {
-      }
+      "image": null
     },
     {
       "id": 6,
@@ -297,13 +280,10 @@ module.exports = {
         "shareImage": {
           "id": 6,
           "alt": "pizza",
-          "image": {
-
-          }
+          "image": null
         }
       },
-      "image": {
-      }
+      "image": null
     }
   ]
 };
