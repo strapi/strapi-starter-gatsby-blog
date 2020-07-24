@@ -91,12 +91,6 @@ const createSeedData = async (files) => {
     return image
   }
 
-  const categoriesPromises = categories.map(({ ...rest }) => {
-    return strapi.services.category.create({
-      ...rest
-    });
-  });
-
 
   const homepagePromises = homepages.map(async homepage => {
     const image = handleFiles(homepage, "homepage")
@@ -104,13 +98,18 @@ const createSeedData = async (files) => {
       "Seo.shareImage.image": image
     };
 
-    const entry = await strapi.query("homepage").create(homepage);
+    try {
+      const entry = await strapi.query("homepage").create(homepage);
 
-    if (files) {
-      await strapi.entityService.uploadFiles(entry, files, {
-        model: "homepage"
-      });
+      if (files) {
+        await strapi.entityService.uploadFiles(entry, files, {
+          model: "homepage"
+        });
+      }
+    } catch (e) {
+      console.log(e);
     }
+
   });
 
   const usersPromises = users.map(async user => {
@@ -119,13 +118,18 @@ const createSeedData = async (files) => {
       image
     };
 
-    const entry = await strapi.query("user", "users-permissions").create(user);
+    try {
+      const entry = await strapi.query("user", "users-permissions").create(user);
 
-    if (files) {
-      await strapi.entityService.uploadFiles(entry, files, {
-        model: "plugins::users-permissions.user"
-      });
+      if (files) {
+        await strapi.entityService.uploadFiles(entry, files, {
+          model: "plugins::users-permissions.user"
+        });
+      }
+    } catch (e) {
+      console.log(e);
     }
+
   });
 
   const articlesPromises = articles.map(async article => {
@@ -135,16 +139,20 @@ const createSeedData = async (files) => {
       "Seo.shareImage.image": image
     };
 
-    const entry = await strapi.query('article').create(article);
+    try {
+      const entry = await strapi.query('artifdscle').create(article);
 
-    if (files) {
-      await strapi.entityService.uploadFiles(entry, files, {
-        model: 'article'
-      });
+      if (files) {
+        await strapi.entityService.uploadFiles(entry, files, {
+          model: 'article'
+        });
+      }
+    } catch (e) {
+      console.log(e);
     }
+
   });
 
-  await Promise.all(categoriesPromises);
   await Promise.all(homepagePromises);
   await Promise.all(usersPromises);
   await Promise.all(articlesPromises);
@@ -154,7 +162,12 @@ module.exports = async () => {
     const shouldSetDefaultPermissions = await isFirstRun();
     if (true) {
       console.log("Setting up your starter...");
-      const files = fs.readdirSync(`./seed/uploads`);
+      try {
+        const files = fs.readdirSync(`./seed/uploads`);
+
+      } catch (e) {
+        console.log(e);
+      }
       await setDefaultPermissions();
       await createSeedData(files);
       console.log("Ready to go");
