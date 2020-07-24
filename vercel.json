@@ -1,5 +1,13 @@
 {
-  "builds": [{ "src": "./frontend/*", "use": "@vercel/static" }],
+  "builds": [
+    {
+      "src": "./frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "public" 
+      }
+    }
+  ],
   "build": {
     "env": {
       "API_URL": "@api-url"
