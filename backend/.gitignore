@@ -115,8 +115,6 @@ build
 
 # Custom
 
-data/*
-!data.zip
 __MACOSX/*
 
 ############################
