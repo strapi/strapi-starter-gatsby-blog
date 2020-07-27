@@ -65,7 +65,7 @@ module.exports = {
   ],
   users: [
     {
-      "username": "David Doe (Author)",
+      "username": "David Doe",
       "email": "daviddoe@strapi.io",
       "provider": "local",
       "confirmed": true,
@@ -85,7 +85,7 @@ module.exports = {
       "image": null
     },
     {
-      "username": "Sarah Baker (Editor)",
+      "username": "Sarah Baker",
       "email": "sarahbaker@strapi.io",
       "provider": "local",
       "confirmed": true,
