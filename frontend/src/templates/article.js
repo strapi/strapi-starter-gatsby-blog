@@ -28,6 +28,7 @@ export const query = graphql`
         }
       }
       image {
+        publicURL
         childImageSharp {
             fixed {
               src
