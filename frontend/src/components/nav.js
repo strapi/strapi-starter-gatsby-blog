@@ -38,7 +38,7 @@ const Nav = () => (
                 <ul className="uk-nav uk-dropdown-nav">
                 { data.allStrapiCategory.edges.map((category, i) => {
                     return (
-                      <li key={category.node.strapiId}>
+                      <li key={`category__${category.node.slug}`}>
                         <Link to={`/category/${category.node.slug}`}>
                           {category.node.name}
                         </Link>

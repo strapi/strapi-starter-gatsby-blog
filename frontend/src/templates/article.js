@@ -80,13 +80,13 @@ const Article = ({ data }) => {
             <hr className="uk-divider-small" />
 
 
-            <div class="uk-grid-small uk-flex-left" uk-grid>
+            <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
                 <div >
                   {article.user.image && <Img fixed={article.user.image.childImageSharp.fixed} imgStyle={{ position: 'static',  borderRadius: '50%' }} />}
                 </div>
-                <div class="uk-width-expand">
-                    <p class="uk-margin-remove-bottom">By { article.user.username }</p>
-                    <p class="uk-text-meta uk-margin-remove-top"><Moment format="MMM Do YYYY">{article.published_at}</Moment></p>
+                <div className="uk-width-expand">
+                    <p className="uk-margin-remove-bottom">By { article.user.username }</p>
+                    <p className="uk-text-meta uk-margin-remove-top"><Moment format="MMM Do YYYY">{article.published_at}</Moment></p>
                 </div>
             </div>
           </div>
