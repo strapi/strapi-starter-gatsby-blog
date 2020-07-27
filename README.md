@@ -25,6 +25,7 @@ To deploy the Gatsby blog you'll need:
 
   - [A Vercel account](https://vercel.com/dashboard) for free
   - Wait for your heroku instance to be up and running before deploying your Gatsby Blog
+  - Vercel will ask you the root directory of the project to deploy which is **frontend**
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fstrapi%2Fstrapi-starter-gatsby-blog-v2&env=API_URL&envDescription=Enter%20the%20url%20of%20your%20Strapi%20API%20without%20the%20trailing%20slash&project-name=my-strapi-starter-gatsby-blog)
 
