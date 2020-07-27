@@ -28,7 +28,11 @@ export const query = graphql`
         }
       }
       image {
-        publicURL
+        childImageSharp {
+            fixed {
+              src
+            }
+        }
       }
       childStrapiArticleContent {
         childMdx {
@@ -38,7 +42,6 @@ export const query = graphql`
       user {
         username
         image {
-          publicURL
           childImageSharp {
               fixed(width: 30, height: 30) {
                 src

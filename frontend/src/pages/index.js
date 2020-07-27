@@ -26,7 +26,6 @@ const IndexPage = () => (
                   name
                 }
                 image {
-                  publicURL
                   childImageSharp {
                       fixed(width: 800, height: 500) {
                       	src
@@ -36,7 +35,6 @@ const IndexPage = () => (
                 user {
                   username
                   image {
-                    publicURL
                     childImageSharp {
                         fixed(width: 30, height: 30) {
                         	src

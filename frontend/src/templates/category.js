@@ -25,7 +25,6 @@ export const query = graphql`
           user {
             username
             image {
-              publicURL
               childImageSharp {
                   fixed(width: 30, height: 30) {
                     src
