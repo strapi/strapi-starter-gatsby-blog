@@ -27,7 +27,16 @@ To deploy the Gatsby blog you'll need:
   - Wait for your heroku instance to be up and running before deploying your Gatsby Blog
   - Vercel will ask you the root directory of the project to deploy which is **frontend**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fstrapi%2Fstrapi-starter-gatsby-blog-v2&env=API_URL&envDescription=Enter%20the%20url%20of%20your%20Strapi%20API%20without%20the%20trailing%20slash&project-name=my-strapi-starter-gatsby-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fstrapi%2Fstrapi-starter-gatsby-blog-v2&env=API_URL&envDescription=Enter%20the%20url%20of%20your%20Strapi%20API%20without%20the%20trailing%20slash&project-name=my-strapi-starter-gatsby-blog)  
+
+  - Select the repository you want to deploy, here it's the strapi-starter-gatsby-blog-v2
+  - Select the root directory of your frontend
+
+![Root directory](/medias/vercel-deploy-step-1.png)
+
+  - Paste the url of your running Strapi instance on Heroku without the trailing slash
+
+![Root directory](/medias/vercel-deploy-step-2.png)  
 
 **On Gatsby Cloud**
 
@@ -61,6 +70,21 @@ Now you'll need to create a Webhook on your strapi server in order to tell Gatsb
   - Check every Events for `Entry` and `Media`
 
 That's it! Now Strapi will inform Gatsby Cloud to build your Gatsby project everytime you create/update/delete content
+
+### Automatic build on Vercel
+
+We're using Gatsby which is a static site generator (SSG). This means we need to trigger new builds when the content changes in Strapi. We'll use webhooks to do this automatically.
+
+We first need to create a Deploy Hook in Vercel. In your project's settings, go to the end of the Git Integration tab. Name your hook however you want, but make sure you link it to your master branch.
+
+![Webhooks vercel](/medias/vercel-deploy-hook.png)
+
+Then copy the generated URL and open your Strapi admin in production. In the settings tab, open Webhooks and paste the hook URL. Make sure you check all events to trigger build after every change.
+
+![Webhooks Strapi](/medias/webhook-vercel.png)
+![Webhooks Strapi](/medias/webhooks.png)
+
+Now everytime we make a change in Strapi, Vercel creates a new build!
 
 ### Features in Strapi
 
