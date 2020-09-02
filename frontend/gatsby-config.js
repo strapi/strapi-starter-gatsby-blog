@@ -34,7 +34,7 @@ module.exports = {
         singleTypes: [`Homepage`],
         queryLimit: 20,
         loginData: {
-          identifier: 3,
+          identifier: "3",
           password: "123qwe!@#QWE",
         },
       },
