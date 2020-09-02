@@ -31,7 +31,8 @@ module.exports = {
           "category",
           "user"
         ],
-        queryLimit: 20
+        singleTypes: [`Homepage`],
+        queryLimit: 1000
       },
     },
     "gatsby-transformer-sharp",
