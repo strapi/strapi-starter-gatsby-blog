@@ -8,7 +8,7 @@ module.exports = {
     titleTemplate: "%s · Unleash content",
     description:
       "Strapi Gatsby Blog Starter",
-    url: process.env.API_URL || "http://localhost:1337", // No trailing slash allowed!
+    url: process.env.API_URL || "https://maxymliksunov.herokuapp.com/", // No trailing slash allowed!
     image: "/uploads/default-image.jpeg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@you",
   },
@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
+        apiURL: process.env.API_URL || "https://maxymliksunov.herokuapp.com/",
         contentTypes: [
           "article",
           "category",
