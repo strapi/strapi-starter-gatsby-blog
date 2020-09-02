@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.API_URL || "https://maxymliksunov.herokuapp.com/",
+        apiURL: process.env.API_URL || "https://maxymliksunov.herokuapp.com",
         contentTypes: [
           "article",
           "category",
