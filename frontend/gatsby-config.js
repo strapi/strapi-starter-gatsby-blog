@@ -31,7 +31,6 @@ module.exports = {
           "category",
           "user"
         ],
-        singleTypes: [`Homepage`],
         queryLimit: 20
       },
     },
