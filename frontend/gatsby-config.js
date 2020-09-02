@@ -32,7 +32,11 @@ module.exports = {
           "user"
         ],
         singleTypes: [`Homepage`],
-        queryLimit: 1000,
+        queryLimit: 20,
+        loginData: {
+          identifier: "user",
+          password: "123qwe!@#QWE"
+        }
       },
     },
     "gatsby-transformer-sharp",
