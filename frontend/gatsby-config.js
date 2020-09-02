@@ -35,8 +35,8 @@ module.exports = {
         queryLimit: 20,
         loginData: {
           identifier: "user",
-          password: "123qwe!@#QWE"
-        }
+          password: "123qwe!@#QWE",
+        },
       },
     },
     "gatsby-transformer-sharp",
