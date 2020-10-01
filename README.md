@@ -51,7 +51,7 @@ npm install
 npm run develop
 ```
 
-If you want to change the default environment variables, create a `.env.local` file like this:
+If you want to change the default environment variables, create a `.env` file like this:
 
 ```sh
 cp .env.example .env
