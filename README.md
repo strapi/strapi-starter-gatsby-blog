@@ -34,7 +34,7 @@ npx create-strapi-starter my-site gatsby-blog
 
 The CLI will create a monorepo, install dependencies, and run your project automatically.
 
-The Gatsby frontend server will run here => [http://localhost:8000](http://localhost:3000)
+The Gatsby frontend server will run here => [http://localhost:8000](http://localhost:8000)
 
 The Strapi backend server will run here => [http://localhost:1337](http://localhost:1337)
 
