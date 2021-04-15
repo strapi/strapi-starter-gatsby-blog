@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Moment from "react-moment";
 import Layout from "../../components/layout";
 import Markdown from "react-markdown";
@@ -16,18 +16,14 @@ export const query = graphql`
       image {
         publicURL
         childImageSharp {
-          fixed {
-            src
-          }
+          gatsbyImageData(placeholder: TRACED_SVG)
         }
       }
       author {
         name
         picture {
           childImageSharp {
-            fixed(width: 30, height: 30) {
-              src
-            }
+            gatsbyImageData(width: 30)
           }
         }
       }
@@ -66,9 +62,8 @@ const Article = ({ data }) => {
             <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
               <div>
                 {article.author.picture && (
-                  <Img
-                    fixed={article.author.picture.childImageSharp.fixed}
-                    imgStyle={{ position: "static", borderRadius: "50%" }}
+                  <GatsbyImage
+                    image={article.author.picture.childImageSharp.gatsbyImageData}
                   />
                 )}
               </div>

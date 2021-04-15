@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Card = ({ article }) => {
   return (
     <Link to={`/article/${article.node.slug}`} className="uk-link-reset">
       <div className="uk-card uk-card-muted">
         <div className="uk-card-media-top">
-          <Img
-            fixed={article.node.image.childImageSharp.fixed}
-            imgStyle={{ position: "static" }}
+          <GatsbyImage
+            image={article.node.image.childImageSharp.gatsbyImageData}
           />
         </div>
         <div className="uk-card-body">
@@ -24,9 +23,8 @@ const Card = ({ article }) => {
             <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
               <div>
                 {article.node.author.picture && (
-                  <Img
-                    fixed={article.node.author.picture.childImageSharp.fixed}
-                    imgStyle={{ position: "static", borderRadius: "50%" }}
+                  <GatsbyImage
+                    image={article.node.image.childImageSharp.gatsbyImageData}
                   />
                 )}
               </div>
