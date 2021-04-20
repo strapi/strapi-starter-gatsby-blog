@@ -27,6 +27,7 @@ const Card = ({ article }) => {
                   <GatsbyImage
                     image={article.node.author.picture.childImageSharp.gatsbyImageData}
                     alt={`Picture of ${article.node.author.name}`}
+                    style={{ borderRadius: "50%" }}
                   />
                 )}
               </div>
