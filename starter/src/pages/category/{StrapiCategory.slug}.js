@@ -26,9 +26,7 @@ export const query = graphql`
             name
             picture {
               childImageSharp {
-                fixed(width: 30, height: 30) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 30)
               }
             }
           }

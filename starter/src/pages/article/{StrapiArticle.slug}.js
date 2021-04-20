@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Moment from "react-moment";
 import Layout from "../../components/layout";
 import Markdown from "react-markdown";
@@ -16,18 +16,14 @@ export const query = graphql`
       image {
         publicURL
         childImageSharp {
-          fixed {
-            src
-          }
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
         }
       }
       author {
         name
         picture {
           childImageSharp {
-            fixed(width: 30, height: 30) {
-              src
-            }
+            gatsbyImageData(width: 30)
           }
         }
       }
@@ -47,16 +43,27 @@ const Article = ({ data }) => {
   return (
     <Layout seo={seo}>
       <div>
-        <div
-          id="banner"
-          className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-          data-src={article.image.publicURL}
-          data-srcset={article.image.publicURL}
-          data-uk-img
-        >
-          <h1>{article.title}</h1>
+        <div style={{ display: "grid" }}>
+          <GatsbyImage
+            style={{
+              gridArea: "1/1",
+            }}
+            image={article.image.childImageSharp.gatsbyImageData}
+            layout="fullWidth"
+          />
+          <div
+            style={{
+              // By using the same grid area for both, they are stacked on top of each other
+              gridArea: "1/1",
+              position: "relative",
+              // This centers the other elements inside the hero component
+              placeItems: "center",
+              display: "grid",
+            }}
+          >
+            <h1 style={{ color: `white` }}>{article.title}</h1>
+          </div>
         </div>
-
         <div className="uk-section">
           <div className="uk-container uk-container-small">
             <Markdown source={article.content} escapeHtml={false} />
@@ -66,9 +73,9 @@ const Article = ({ data }) => {
             <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
               <div>
                 {article.author.picture && (
-                  <Img
-                    fixed={article.author.picture.childImageSharp.fixed}
-                    imgStyle={{ position: "static", borderRadius: "50%" }}
+                  <GatsbyImage
+                    image={article.author.picture.childImageSharp.gatsbyImageData}
+                    alt={`Picture of ${article.author.name}`}
                   />
                 )}
               </div>
