@@ -79,6 +79,7 @@ const Article = ({ data }) => {
                       article.author.picture.childImageSharp.gatsbyImageData
                     }
                     alt={`Picture of ${article.author.name}`}
+                    style={{ borderRadius: "50%" }}
                   />
                 )}
               </div>
