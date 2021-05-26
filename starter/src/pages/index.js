@@ -29,7 +29,9 @@ const query = graphql`
         metaTitle
         metaDescription
         shareImage {
-          publicURL
+          localFile {
+            publicURL
+          }
         }
       }
     }
@@ -43,15 +45,19 @@ const query = graphql`
             name
           }
           image {
-            childImageSharp {
-              gatsbyImageData(width: 800, height: 500)
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 800, height: 500)
+              }
             }
           }
           author {
             name
             picture {
-              childImageSharp {
-                gatsbyImageData(width: 30, height: 30)
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(width: 30, height: 30)
+                }
               }
             }
           }

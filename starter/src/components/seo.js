@@ -44,7 +44,7 @@ const SEO = ({ seo = {} }) => {
     if (fullSeo.shareImage) {
       const imageUrl =
         (process.env.GATSBY_ROOT_URL || "http://localhost:8000") +
-        fullSeo.shareImage.publicURL;
+        fullSeo.shareImage.localFile.publicURL;
       tags.push(
         {
           name: "image",
@@ -131,13 +131,17 @@ const query = graphql`
     strapiGlobal {
       siteName
       favicon {
-        publicURL
+        localFile {
+          publicURL
+        }
       }
       defaultSeo {
         metaTitle
         metaDescription
         shareImage {
-          publicURL
+          localFile {
+            publicURL
+          }
         }
       }
     }
