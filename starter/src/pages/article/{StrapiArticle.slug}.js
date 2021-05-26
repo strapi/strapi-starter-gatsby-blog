@@ -15,6 +15,7 @@ export const query = graphql`
       publishedAt
       image {
         localFile {
+          publicURL
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH, placeholder: TRACED_SVG)
           }
