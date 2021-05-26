@@ -13,7 +13,9 @@ const Layout = ({ children, seo }) => (
             metaTitle
             metaDescription
             shareImage {
-              publicURL
+              localFile {
+                publicURL
+              }
             }
           }
         }

@@ -16,17 +16,19 @@ export const query = graphql`
             name
           }
           image {
-            childImageSharp {
-              fixed(width: 660) {
-                src
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 660)
               }
             }
           }
           author {
             name
             picture {
-              childImageSharp {
-                gatsbyImageData(width: 30)
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(width: 30)
+                }
               }
             }
           }
