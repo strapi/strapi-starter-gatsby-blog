@@ -7,12 +7,12 @@ import Markdown from "react-markdown";
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
-    strapiArticle(slug: { eq: $slug }, status: { eq: "published" }) {
+    strapiArticle(slug: { eq: $slug }) {
       strapiId
       title
       description
       content
-      publishedAt
+      published_at
       image {
         localFile {
           publicURL
@@ -80,7 +80,8 @@ const Article = ({ data }) => {
                 {article.author.picture && (
                   <GatsbyImage
                     image={
-                      article.author.picture.localFile.childImageSharp.gatsbyImageData
+                      article.author.picture.localFile.childImageSharp
+                        .gatsbyImageData
                     }
                     alt={`Picture of ${article.author.name}`}
                     style={{ borderRadius: "50%" }}
