@@ -12,7 +12,7 @@ export const query = graphql`
       title
       description
       content
-      publishedAt
+      published_at
       image {
         localFile {
           publicURL
