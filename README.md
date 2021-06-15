@@ -14,6 +14,10 @@ This starter allows you to try Strapi with Gatsby with the example of a simple b
 - Responsive design using UIkit
 - SEO and social media friendly
 
+This starter uses the [Strapi blog template](https://github.com/strapi/strapi-template-blog)
+
+Check out all of our starters [here](https://strapi.io/starters)
+
 Pages:
 
 - "/" to display every articles
